@@ -62,9 +62,7 @@ h1:hover {
     margin: 5px 3vw;
 }
 button {
-    /* width: 30vw;
-    margin-left: 3vw;
-    margin-right: 3vw; */
+    
     font-family: 'Reenie Beanie', cursive; 
     /* font-family: 'Press Start 2P', cursive;            */
     font-size: 40px;
@@ -150,4 +148,5 @@ button:hover {
     button {
         font-size: 30px;
     }
+    
 }
