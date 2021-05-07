@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Reenie Beanie', cursive;
+    background-color: black;
+    overflow-x: hidden;
+}
+h2 {
+    color: rgba(128,128,128,1);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    padding:5px;
+    transition: color 1s, background-color 2s 1s;
+    /* transition-timing-function: background-color ease-in-out; */
+    background-color: rgba(0,0,0,1)
+}
+#h2_1:hover {
+    color: rgba(128,128,128,0);
+    background-color: rgba(0,0,0,0);
+}
+#h2_2 {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    color:rgb(126, 21, 21);
+    /* color: rgba(128,128,128,0);
+    transition: color 1s; */
+}
+/* #h2_2:hover {
+    color: rgba(128,128,128,1);
+} */
+h1 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    transition: color 0.8s;
+    transition-timing-function: ease-in-out;
+}
+h1:hover {
+    color: yellow;
+}
+.head {
+    /* position:absolute; */
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 20vh;
+    min-height:150px; */
+}
+.menu {
+    display: grid;
+    grid-template-columns: calc(88vw/3) calc(88vw/3) calc(88vw/3);
+    grid-column-gap: 3vw;
+    margin: 5px 3vw;
+}
+button {
+    /* width: 30vw;
+    margin-left: 3vw;
+    margin-right: 3vw; */
+    font-family: 'Reenie Beanie', cursive; 
+    /* font-family: 'Press Start 2P', cursive;            */
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(36, 10, 10);
+    padding: 10px;
+    background-color: rgb(170, 32, 32);
+    border: outset maroon 5px;
+    box-sizing: border-box;
+    /* transition: color 0.4s, background-color 0.4s; */
+}
+button:hover {
+    background-color: rgb(126, 21, 21);
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border: inset maroon 5px;
+    color: black;
+    cursor:pointer;
+}
+#well_images {
+    width:500px;
+    height: 500px;
+    margin-top: 30px;
+    animation: shudder 1s linear 0s infinite normal paused;
+}
+#well_images:hover {
+    animation: shudder 100ms linear 0s infinite normal running;
+}
+@keyframes shudder {
+    0% {
+        transform: translateX(0px);
+    }
+    20% {
+        transform: translateX(3px);
+    }
+    40% {
+        transform: translateX(0px);
+    }
+    60% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+#well_full {
+    position:absolute;
+    width: 500px;
+    height:auto;
+}
+#well_front {
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height:auto;
+    
+}
+#justify {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+    }
+    #well_full, #well_front {
+        width: 300px;
+    }
+    #well_images {
+        width: 300px;
+        height: 300px;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 3vw;
+        margin: 5px 3vw;
+    }
+    button {
+        font-size: 30px;
+    }
+}
