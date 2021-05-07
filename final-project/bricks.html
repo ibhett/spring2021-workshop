@@ -29,15 +29,52 @@
                 }
             }
             #dark {
-                background: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.8));
+                background: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.9));
                 width: 100%;
                 height: 100%;
                 /* background-color: black; */
                 /* animation: darker 10s linear 0s 1; */
+                z-index: 2;
+            }
+
+            .drip {
+                position:absolute;
+                animation: dripping 20s linear infinite;
+                width: 200px;
+                position: absolute;
+                top: -100px;
+                /* left: 0; */
+                /*Solution for smoothly getting bigger----*/
+                transition: opacity 0.5s;
+                opacity:1;
+                z-index: 1;
+                width: 50px;
+            }
+            .drip:hover {
+                animation-play-state: paused;
+                opacity: 0;
+            }
+            @keyframes dripping {
+                0% {
+                    transform: translateY(0px);
+                }
+                100% {
+                    transform: translateY(10100px);
+                }
             }
         </style>
     </head>
     <body>
+        <div id="drops">
+            <img class="drip" style="left:80vw;" src="assets/droplet2.png">
+            <img class="drip" style="left:20vw; animation-delay: 15s;" src="assets/droplet2.png">
+            <img class="drip" style="left:40vw; animation-delay: 2s;" src="assets/droplet2.png">
+            <img class="drip" style="left:7vw; animation-delay: 6s;" src="assets/droplet2.png">
+            <img class="drip" style="left:70vw; animation-delay: 12s;" src="assets/droplet2.png">
+            <img class="drip" style="left:45vw; animation-delay: 18s;" src="assets/droplet2.png">
+            <img class="drip" style="left:85vw; animation-delay: 16s;" src="assets/droplet2.png">
+            <img class="drip" style="left:19vw; animation-delay: 5s;" src="assets/droplet2.png">
+        </div>
         <div id="dark"></div>
     </body>
 </html>

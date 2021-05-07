@@ -14,25 +14,27 @@ h2 {
     font-size: 40px;
     margin-top: 20px;
     padding:5px;
-    transition: color 1s, background-color 2s 1s;
-    /* transition-timing-function: background-color ease-in-out; */
-    background-color: rgba(0,0,0,1)
+    background-color: rgba(0,0,0,1);
 }
 #h2_1:hover {
-    color: rgba(128,128,128,0);
-    background-color: rgba(0,0,0,0);
+    animation: color 0.7s linear 0s forwards, bg 1.5s linear 0.7s forwards;
 }
 #h2_2 {
     position: absolute;
     top: 0px;
     z-index: -1;
     color:rgb(126, 21, 21);
-    /* color: rgba(128,128,128,0);
-    transition: color 1s; */
 }
-/* #h2_2:hover {
-    color: rgba(128,128,128,1);
-} */
+
+@keyframes color {
+    from { color: rgba(128,128,128,1); }
+     to { color: rgba(128,128,128,0); }
+}
+@keyframes bg {
+    from{ background-color: rgba(0,0,0,1);}
+    to {background-color: rgba(0,0,0,0);}
+}
+
 h1 {
     font-family: 'UnifrakturCook', cursive;
     font-size: 80px;
@@ -84,7 +86,7 @@ button:hover {
 }
 #well_images {
     width:500px;
-    height: 500px;
+    height: 400px;
     margin-top: 30px;
     animation: shudder 1s linear 0s infinite normal paused;
 }
@@ -136,7 +138,7 @@ button:hover {
     }
     #well_images {
         width: 300px;
-        height: 300px;
+        height: 275px;
     }
     .menu {
         display: grid;
