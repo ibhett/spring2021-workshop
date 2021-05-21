@@ -4,7 +4,21 @@
     	<meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta charset="utf-8"> 
        	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
         <title>Webpage Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+        <script>
+            $(document).ready(function() {
+                $("#scroll-up").click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 2000);
+                    $("#escape").css("display","block");
+                });
+            });
+        </script>
         <style>
             * {
                 box-sizing: border-box;
@@ -35,6 +49,10 @@
                 /* background-color: black; */
                 /* animation: darker 10s linear 0s 1; */
                 z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
             }
 
             .drip {
@@ -62,6 +80,43 @@
                     transform: translateY(10100px);
                 }
             }
+            button {
+                font-family: 'Reenie Beanie', cursive; 
+                font-size: 35px;
+                font-weight: bold;
+                color: rgb(36, 10, 10);
+                padding: 10px;
+                background-color: rgb(170, 32, 32);
+                border: outset maroon 5px;
+                box-sizing: border-box;
+                margin: 20px;
+            }
+            button:hover {
+                background-color: rgb(126, 21, 21);
+                padding-top: 15px;
+                padding-bottom: 5px;
+                border: inset maroon 5px;
+                color: black;
+                cursor:pointer;
+            }
+            #oh-well {
+                background-color: rgb(49, 49, 49);
+                color: white;
+                font-family: 'Reenie Beanie', cursive; 
+                font-size: 40px;
+                width: 60%;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 3px solid gray;
+            }
+            #escape {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -75,6 +130,18 @@
             <img class="drip" style="left:85vw; animation-delay: 16s;" src="assets/droplet2.png">
             <img class="drip" style="left:19vw; animation-delay: 5s;" src="assets/droplet2.png">
         </div>
-        <div id="dark"></div>
+        <div id="dark">
+            <div id="oh-well">
+                Oh well. Nothing to see down here.
+            </div>
+            <button id="scroll-up">
+                Go Back
+            </button>
+        </div>
+        <button id="escape" onclick="window.location.href='index.html';">
+            Crawl out?
+        </button>
+        
+        
     </body>
 </html>
