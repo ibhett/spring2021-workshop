@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+        
     	<meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta charset="utf-8"> 
        	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Well of Secrets</title>
+        <title>Dunking Time</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="dunk-style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="dunk-script.js"></script>
         <style>
         </style>
     </head>
     <body>
-        <div class="head">
+        <!-- <div class="head">
             <div id="secret1">
                 
                 <h2 id="h2_2">BEWARE the...</h2>
@@ -27,26 +27,35 @@
             </div>
             
             <h1>Well of Secrets and Mysteries</h1>
-        </div>
+        </div> -->
         
         <div class="menu">
-            <button onclick="window.location.href='secret.html';">Purge Your Secret</button>
-            <button onclick="window.location.href='dunk.html';">Grab a Bucket</button>
-            <button onclick="window.location.href='bricks.html';">Climb Inside</button>
+            <button onclick="window.location.href='index.html';">Go Back</button>
+            <button id ="middle">Grab a Bucket</button>
+            <button id="dunk-time">Dunk the Bucket!</button>
         </div>
         <div id="justify">
             <div id="well_images">
-                <img id="well_full" src="assets/well_full_eyes.png">
-                <!-- <img id="well_front" src="assets/well_front.png"> -->
-                <div id="eyes">
+                <img id="well_full" src="assets/well_full.png">
+                <div id="ropeBucket">
+                    <div id="rope"></div>
+                    <img id="bucket" src="assets/bucket.png"> 
+                </div>
+                
+                <img id="well_front" src="assets/well_front.png">
+
+                <!-- <div id="eyes">
                     <div class="eye" id="leftEye">
                         <div class="ball"></div>
                     </div>
                     <div class="eye" id="rightEye">
                         <div class="ball"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
+        <button id="secret-button" onclick="window.location.href='bucket-down.html';">Let's see what you got</button>
+
+        
     </body>
 </html>
